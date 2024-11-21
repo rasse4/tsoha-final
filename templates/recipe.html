@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title %}Recipe{% endblock %}
+{% block content %}
+<html>
+
+<head>
+
+
+    <title>{{messages[0].name}}</title>
+
+</head>
+
+<body>
+
+
+
+    <h1>{{messages[0].name}}</h1>
+    <br>
+
+
+
+    Ingredients:
+    <br>
+    <ul id="listWithHandle">
+        {% for item in messages %}
+        <li>
+
+            <a href="/ing/{{item[1]}}" id='trig1'> {{item[1]}} ({{item[2]}}) ({{item[3]}})</a>
+
+
+
+        </li>
+        {% endfor %}
+
+        <br>
+
+    </ul>
+
+
+    Styles: <br>
+
+    <ul id="listWithHandle">
+        {% for item in styledata %}
+        <li>
+
+            <a href="/stylepage/{{item[1]}}" id='trig1'> {{item[1]}} ({{item[2]}}) </a>
+
+
+
+        </li>
+        {% endfor %}
+
+    </ul>
+
+
+
+    <br>
+
+    </div>
+
+</body>
+
+
+</html>
+
+{% endblock %}

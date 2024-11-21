@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}frontpage{% endblock %}
+{% block content %}
+<h1>Database front page</h1>
+
+<form action="/freeres" method="POST">
+    Search all categories:
+    <input type="text" name="name">
+    <br>
+    <input type="submit" value="Search">
+
+</form>
+<a href="/freeres"></a>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<html>
+
+<body>
+
+
+    <b>Recipes made with style: {{name}}</b>
+
+    {{styledata[0].name}} ({{styledata[0].infotype}}).
+    <br>
+
+
+    <br>
+
+    <ul id="listWithHandle">
+
+        {% for item in stylelinks %}
+        <li>
+
+            <a href="/page/{{item[0]}}" id='trig1'> {{item[0]}}</a>
+
+
+
+        </li>
+        {% endfor %}
+
+        <br>
+
+
+    </ul>
+
+
+
+    <br>
+
+    </div>
+
+</body>
+
+
+</html>
+
+{% endblock %}

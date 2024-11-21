@@ -1,0 +1,239 @@
+{% extends "layout.html" %}
+
+{% block title %}frontpage{% endblock %}
+{% block content %}
+<h1>Database search</h1>
+
+
+
+<form action="/searchres" method="POST">
+
+
+
+
+    Search with ingredients:
+    <br>
+    <select name="ing1" id="ing1">
+
+
+        <option value="any">Any</option>
+
+        {% for item in ingnames %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+
+
+    </select>
+
+    <br>
+
+    <select name="ing2" id="ing2">
+
+        <option value="any">Any</option>
+
+        {% for item in ingnames %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="ing3" id="ing3">
+
+        <option value="any">Any</option>
+
+        {% for item in ingnames %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="ing4" id="ing4">
+
+        <option value="any">Any</option>
+
+        {% for item in ingnames %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="ing5" id="ing5">
+
+        <option value="any">Any</option>
+
+        {% for item in ingnames %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="ing6" id="ing6">
+
+        <option value="any">Any</option>
+
+        {% for item in ingnames %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    Search with ingredient style:
+    <br>
+    <select name="ingstyle1" id="ingstyle1">
+
+        <option value="any">Any</option>
+        {% for item in ingstyles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+
+
+    </select>
+    <br>
+    <select name="ingstyle2" id="ingstyle2">
+
+        <option value="any">Any</option>
+        {% for item in ingstyles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="ingstyle3" id="ingstyle3">
+
+        <option value="any">Any</option>
+        {% for item in ingstyles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="ingstyle4" id="ingstyle4">
+
+        <option value="any">Any</option>
+        {% for item in ingstyles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    Search by ing rarity:
+    <br>
+    <select name="rarity" id="rarity">
+
+        <option value="any">Any</option>
+        {% for item in rarity %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    Search by style:
+    <br>
+    <select name="style1" id="style1">
+
+        <option value="any">Any</option>
+        {% for item in styles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+
+    </select>
+    <br>
+    <select name="style2" id="style2">
+        <option value="any">Any</option>
+
+        {% for item in styles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="style3" id="style3">
+        <option value="any">Any</option>
+
+        {% for item in styles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <select name="style4" id="style4">
+        <option value="any">Any</option>
+
+        {% for item in styles %}
+
+
+        <option value="{{item[0]}}">{{item[0]}}</option>
+
+
+        {% endfor %}
+    </select>
+    <br>
+
+
+
+
+    <br>
+    <input type="submit" value="Search">
+
+
+
+</form>
+<a href="/searchres"></a>
+
+{% endblock %}

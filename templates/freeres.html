@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}result page{% endblock %}
+{% block content %}
+
+<head>
+
+
+
+</head>
+
+You searched with: <b>{{searchterm}}:</b>
+<br>
+
+Recipes by matching name:
+
+
+
+<ul id="listWithHandle"></ul>
+{% for message in messages1 %}
+<li>
+    <a href="/page/{{message[0]}}" id='trig1'> <b>{{message[0]}}</b></a>
+
+    <hr>
+</li>
+{% endfor %}
+
+Recipes by matching ingredient name:
+
+<hr>
+{% for message in messages2 %}
+<li>
+    <a href="/page/{{message[0]}}" id='trig1'> <b>{{message[0]}}</b></a>
+
+    <hr>
+</li>
+{% endfor %}
+
+
+Recipes by matching style name:
+
+<hr>
+{% for message in messages3 %}
+<li>
+    <a href="/page/{{message[0]}}" id='trig1'> <b>{{message[0]}}</b></a>
+
+    <hr>
+</li>
+
+{% endfor %}
+
+
+{% endblock %}

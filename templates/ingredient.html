@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+
+'{% block title %}Ingredient{% endblock %}
+{% block content %}
+
+
+
+
+<body>
+
+    <b>Recipes made with {{name}}</b>
+
+    <ul id="listWithHandle">
+        {% for item in recipenames %}
+        <li>
+
+            <a href="/page/{{item[0]}}" id='trig1'> {{item[0]}} {{item[1]}} <b>{{item[2]}}</b></a>
+
+
+
+        </li>
+        {% endfor %}
+    </ul>
+
+
+    <b>Number of recipes using {{name}}</b>
+
+    {{ingredientstatistic[0]}} / {{recipeTotal[0]}} ({{recipepercentage}}%)
+
+
+
+
+
+</body>
+
+
+
+{% endblock %}

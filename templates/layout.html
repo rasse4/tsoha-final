@@ -1,0 +1,30 @@
+<!doctype html>
+
+
+<title>Tietokantasovellus - {% block title %}{% endblock %}</title>
+
+<a href="/">Front page</a>
+<a href="/search">Search page</a>
+
+
+
+
+<head>
+    <style>
+        #example1 {
+            border: 2px solid black;
+            padding: 25px;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+    </style>
+</head>
+
+
+
+
+
+<hr>
+<div id="example1">
+    {% block content %}{% endblock %}
+    <hr>
